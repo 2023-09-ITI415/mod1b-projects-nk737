@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
+//using FSharp.Compiler.Text;
 using UnityEditor;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class AppleTree : MonoBehaviour {
     [Header("Set in Inspector")]
@@ -24,19 +26,60 @@ public class AppleTree : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Dropping apples every second
+        Invoke("DropApple", 2f); // a
     }
 
-    // Update is called once per frame
-    
+    void DropApple()
+    { // b
+        GameObject apple = Instantiate<GameObject>(applePrefab); // c
+        apple.transform.position = transform.position; // d
+        Invoke("DropApple", secondsBetweenAppleDrops); // e
+    }
 
-        void Update() {
+
+
+
+    // Update is called once per frame
+
+
+    void Update() {
             // basic movement 
             Vector3 pos = transform.position; //b
             pos.x += speed * Time.deltaTime; // c
             transform.position = pos; //d
+                                      // Changing Direction
+        if (pos.x >= -leftAndRightEdge)
+        {
+            if (pos.x > leftAndRightEdge)
+            {
+                speed = -Mathf.Abs(speed); // Move left
+            } // a
+        }
+        else
+        {
+            speed = Mathf.Abs(speed); // Move right
+        }
+    }
+        void FixedUpdate()
+    {
+        // Changing Direction Randomly is now time-based because of
+        // FixedUpdate()
+    if (Random.value < chanceToChangeDirections)
+        { // b
+            speed *= -1; // Change direction
+        }
+
+
+    }
         }
     
+
+
+
+
+
+
         
-    }
+    
 
