@@ -28,12 +28,12 @@ public class Basket : MonoBehaviour
 
             }
        
-void OnCollisionEnter(Collision coll)
+private void OnCollisionEnter(Collision collision)
 { // a
   // Find out what hit this basket
   
-    GameObject collidedWith = coll.gameObject; // b
-        if (collidedWith.tag == "Apple")
+    GameObject collidedWith = collision.gameObject; // b
+        if (collidedWith.CompareTag("Apple"))
         { // c
             Destroy(collidedWith);
             

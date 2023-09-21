@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -142,9 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applePrefab: {fileID: 1000111119}
   speed: 1
-  leftAndRightEdge: 20
+  leftAndRightEdge: 30
   chanceToChangeDirections: 0.1
-  secondsBetweenAppleDrops: 1
+  secondsBetweenAppleDrops: 3
 --- !u!1 &792234105
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +390,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 224926455008550889, guid: 9177481210f114f40b85feacce1c4cc8, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2074189462862448880, guid: 9177481210f114f40b85feacce1c4cc8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -538,6 +542,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 25194669944381890, guid: 46879253e1397be42911ae3289e24c1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2736117707682191442, guid: 46879253e1397be42911ae3289e24c1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

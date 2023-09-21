@@ -11,8 +11,9 @@ public static float bottomY = -20f; // a
         if (transform.position.y >= bottomY)
         {
             Destroy(this.gameObject);
+            
         }
-        
+
     }
 }
 
