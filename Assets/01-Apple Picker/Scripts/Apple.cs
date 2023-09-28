@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    public static float bottomY = -20f; // a
+    public static float bottomY = -20f; 
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +20,9 @@ public class Apple : MonoBehaviour
             Destroy(this.gameObject);
 
             // Get a reference to the ApplePicker component of Main Camera
-            ApplePicker apScript = Camera.main.GetComponent<ApplePicker>(); // b
-                                                                            // Call the public AppleDestroyed() method of apScript
-            apScript.AppleDestroyed(); // c
+            ApplePicker apScript = Camera.main.GetComponent<ApplePicker>(); 
+            // Call the public AppleDestroyed() method of apScript
+            apScript.AppleDestroyed(); 
         }
     }
 }
