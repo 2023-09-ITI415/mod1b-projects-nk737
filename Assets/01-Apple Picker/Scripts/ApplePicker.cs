@@ -47,7 +47,7 @@ foreach (GameObject tGO in tAppleArray)
          //if there are no baskets left, restart the game
         if ( basketList.Count ==0)
         {
-            SceneManager.LoadScene("_Scene_0");
+            SceneManager.LoadScene("Main-ApplePicker");
         }
     }
     // Update is called once per frame
