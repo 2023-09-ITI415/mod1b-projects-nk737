@@ -564,7 +564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level: 0 of 4'
+  m_Text: 'Level:  of 4'
 --- !u!222 &696601418
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -720,13 +720,13 @@ MonoBehaviour:
   castlePos: {x: 50, y: -9.5, z: 0}
   castles:
   - {fileID: 6427061359936216276, guid: 959f90682aaa7e34e899bcecf5b4e389, type: 3}
-  - {fileID: 6427061359936216276, guid: 08161ac9030ab4c49a175891b8b7fe41, type: 3}
   - {fileID: 6427061359936216276, guid: f826162c04ac53b47960e959292acfe0, type: 3}
+  - {fileID: 6427061359936216276, guid: 08161ac9030ab4c49a175891b8b7fe41, type: 3}
   - {fileID: 6427061359936216276, guid: c3deb4fa65ce881439fa6a044dcec5ef, type: 3}
   level: 0
   levelMax: 0
   shotsTaken: 0
-  castle: {fileID: 6427061359936216276, guid: 959f90682aaa7e34e899bcecf5b4e389, type: 3}
+  castle: {fileID: 0}
   mode: 1
   showing: Show Slingshot
 --- !u!1 &887795843
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 954314551}
   - component: {fileID: 954314550}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: 'Text '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -864,10 +864,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -875,7 +875,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Show Castle
 --- !u!222 &954314551
 CanvasRenderer:
   m_ObjectHideFlags: 0
