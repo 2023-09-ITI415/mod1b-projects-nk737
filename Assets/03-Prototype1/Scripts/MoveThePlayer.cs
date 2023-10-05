@@ -48,4 +48,13 @@ public class MoveThePlayer : MonoBehaviour
             IsOnGround = true;
         }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Collectable"))
+        {
+            other.gameObject.SetActive(false);
+            
+        }
+    }
+
 }
