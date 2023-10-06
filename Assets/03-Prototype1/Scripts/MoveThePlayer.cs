@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+
+using UnityEngine.UI;
 
 public class MoveThePlayer : MonoBehaviour
 {
@@ -10,12 +11,19 @@ public class MoveThePlayer : MonoBehaviour
     public bool IsOnGround = true;
     private float verticalInput;
     public float jumpForce;
+    private int count;
+    public Text countText;
+    public Text winText;
+    public Text notifText;
+    
     
 
     // Start is called before the first frame update
     void Start()
     {
         rg = GetComponent<Rigidbody>();
+        count = 0;
+        SetCountText();
     }
 
     // Update is called once per frame
@@ -53,8 +61,26 @@ public class MoveThePlayer : MonoBehaviour
         if (other.gameObject.CompareTag("Collectable"))
         {
             other.gameObject.SetActive(false);
-            
+            count = count + 1;
+            SetCountText();
         }
+        if(other.gameObject.CompareTag("End"))
+        {
+            if (count >= 30) 
+            {
+                winText.text = "You Made It!!!!!";
+            }
+        }
+    }
+    void SetCountText ()
+    {
+        countText.text = "Score: " + count.ToString();
+        if (count >=30)
+        {
+            notifText.text = "Head to the goal!";
+        }
+        
     }
 
 }
+

@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - Ground
   - Collectable
+  - End
   layers:
   - Default
   - TransparentFX
